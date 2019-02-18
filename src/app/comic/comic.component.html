@@ -1,0 +1,42 @@
+<section class="todoapp" style="margin-top: 0px">
+
+  <ul class="filters">
+    <li>
+      <a [routerLink]="['/all']" [class.selected]="path === 'all'">All</a>
+    </li>
+    <li>
+      <a [routerLink]="['/liked']" [class.selected]="path === 'liked'">Liked</a>
+    </li>
+  </ul>
+  <header class="header">
+    <h2  style="display: block;
+                                          margin-left: auto;
+                                          margin-right: auto;
+                                          width: 50%;">XKCD Comics</h2>
+  </header>
+  <!-- This section should be hidden by default and shown when there are todos -->
+  <section class="main">
+    <div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()" [scrollWindow]="false"
+         style="height: 95vh; overflow-y: scroll;">
+    <ul class="todo-list">
+      <li *ngFor="let comic of comics" >
+
+        <div class="view">
+          <label>{{comic.title}} #{{comic.num}}- {{comic.month}}/{{comic.day}}/{{comic.year}}</label>
+          <img src="{{comic.img}}" style="display: block;
+                                          margin-left: auto;
+                                          margin-right: auto;
+                                          width: 50%;">
+
+          <label> {{comic.alt}}</label>
+          <input class="heart" type="checkbox" id="{{comic.num}}" (click)="toggleComicFavorited(comic)" [checked]="comic.liked" style="visibility: hidden;"/>
+          <label for="{{comic.num}}">❤</label>
+            <label> {{comic.liked ? 'Liked' : 'Not Liked'}}</label>
+
+      </div>
+      </li>
+    </ul>
+    </div>
+  </section>
+  <div id="wrap"></div>
+</section>
