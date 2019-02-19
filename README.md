@@ -4,9 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # V2.0 Requirements
 Split the comics service into Http Service and Local Storage Service
+
 Refactor comics component to leverage new services and remove bloat and logic in component
+
 Interpret path if it is a number to show that specific comic
+
 Add animation for comic being liked for better visibility
+
 Order Comics based on comic number, not what order the api returns them.
 
 ## Development server
