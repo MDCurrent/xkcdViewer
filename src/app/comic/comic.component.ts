@@ -10,7 +10,7 @@ import {Comic} from './comic';
   providers: [ComicService]
 })
 export class ComicComponent implements OnInit {
-  private comics = [];
+  public comics = [];
   public path;
   private show = true;
 
