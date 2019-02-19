@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
 
+# V2.0 Requirements
+Split the comics service into Http Service and Local Storage Service
+
+Refactor comics component to leverage new services and remove bloat and logic in component
+
+Interpret path if it is a number to show that specific comic
+
+Add animation for comic being liked for better visibility
+
+Order Comics based on comic number, not what order the api returns them.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
