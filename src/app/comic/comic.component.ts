@@ -11,7 +11,7 @@ import {Comic} from './comic';
 })
 export class ComicComponent implements OnInit {
   private comics = [];
-  private path;
+  public path;
   private show = true;
 
   // private comicService;
